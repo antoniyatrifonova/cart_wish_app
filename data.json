@@ -1,0 +1,64 @@
+{
+    "categories": [
+      {
+        "id": 1,
+        "name": "SmartPhones",
+        "image": "mobile-phone.png"
+      },
+      {
+        "id": 2,
+        "name": "Laptops",
+        "image": "laptop.png"
+      },
+      {
+        "id": 3,
+        "name": "Smartwatches",
+        "image": "watch.png"
+      },
+      {
+        "id": 4,
+        "name": "Headphones",
+        "image": "headphone.png"
+      },
+      {
+        "id": 5,
+        "name": "Gaming Consoles",
+        "image": "video-game.png"
+      }
+    ],
+    "products": [
+      {
+        "id": "1",
+        "categoryId": 1,
+        "title": "iPhone 14 Pro",
+        "description": "The iPhone 14 Pro is the latest flagship smartphone from Apple, featuring a stunning 6.1-inch OLED display, A16 Bionic chip, 128GB storage, and a triple-lens camera system. This phone also includes advanced features such as Face ID, wireless charging, and water resistance.",
+        "price": 1299,
+        "stock": 8,
+        "rating": 5,
+        "reviewCount": 50,
+        "images": [
+          "iphone14pro-1.jpg",
+          "iphone14pro-2.jpg",
+          "iphone14pro-3.jpg",
+          "iphone14pro-4.jpg"
+        ]
+      },
+      {
+        "id": "2",
+        "categoryId": 1,
+        "title": "Samsung Galaxy A54",
+        "description": "The Samsung Galaxy A54 is a mid-range smartphone with a 6.5-inch FHD+ Super AMOLED display, 4GB of RAM, 128GB of storage, and a quad-lens camera system. It also features a 5000mAh battery with fast charging capabilities and runs on Android 11 with One UI 3.1.",
+        "price": 399,
+        "stock": 50,
+        "rating": 4.2,
+        "reviewCount": 150,
+        "images": [
+          "samsung-a54-1.jpg",
+          "samsung-a54-2.jpg",
+          "samsung-a54-3.jpg",
+          "samsung-a54-4.jpg"
+        ]
+      }
+    ]
+  }
+  
