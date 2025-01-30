@@ -1,40 +1,46 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
+
 import "./ProductsList.css";
 import ProductCard from "./ProductCard";
-import apiClient from "../../utils/api-client";
+import useData from "../../hooks/useData";
 import ProductCardSkeleton from "./ProductCardSkeleton";
 import { useSearchParams } from "react-router-dom";
+import Pagination from "../Common/Pagination";
 
 const ProductsList = () => {
-  const [products, setProducts] = useState([]);
-  const [error, setErrors] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const skeletons = [1, 2, 3, 4, 5, 6, 7, 8];
+  const [page, setPage] = useState(1);
   const [search, setSearch] = useSearchParams();
   const category = search.get("category");
 
-  useEffect(
-    () => {
-      setIsLoading(true);
-      apiClient
-        .get("/products", { params: { category } })
-        .then((res) => {
-          setProducts(res.data);
-          setIsLoading(false);
-        })
-        .catch((err) => {
-          setErrors(err.message);
-          setIsLoading(false);
-        });
+  const { data, error, isLoading } = useData(
+    "/products",
+    {
+      params: {
+        category,
+        perPage: 10,
+        page,
+      },
     },
-    [category] ? [category] : []
+    [category, page]
   );
+
+  useEffect(() => {
+    setPage(1);
+  }, [category]);
+
+  const skeletons = [1, 2, 3, 4, 5, 6, 7, 8];
+
+  const handlePageChange = (page) => {
+    const currentParams = Object.fromEntries([...search]);
+
+    setSearch({ ...currentParams, page: parseInt(currentParams.page) + 1 });
+  };
 
   return (
     <section className="products_list_section">
       <header className="align_center products_list_header">
         <h2>Products</h2>
-        <select name="sort" className="product_sorting">
+        <select name="sort" id="" className="products_sorting">
           <option value="">Relevance</option>
           <option value="price desc">Price HIGH to LOW</option>
           <option value="price asc">Price LOW to HIGH</option>
@@ -45,20 +51,31 @@ const ProductsList = () => {
 
       <div className="products_list">
         {error && <em className="form_error">{error}</em>}
+        {data?.map((product) => {
+          return (
+            <ProductCard
+              key={product.id}
+              id={product.id}
+              image={product.images[0]}
+              price={product.price}
+              title={product.title}
+              rating={product.reviews.rate}
+              ratingCounts={product.reviews.counts}
+              stock={product.stock}
+            />
+          );
+        })}
         {isLoading && skeletons.map((n) => <ProductCardSkeleton key={n} />)}
-        {products.map((product) => (
-          <ProductCard
-            key={product.id}
-            id={product.id}
-            image={product.images[0]}
-            price={product.price}
-            title={product.title}
-            rating={product.rating}
-            ratingCounts={product.ratingCounts}
-            stock={product.stock}
-          />
-        ))}
       </div>
+      {console.log(data.totalProducts)}
+      {data && (
+        <Pagination
+          totalPosts={24}
+          postsPerPage={8}
+          onClick={handlePageChange}
+          currentPage={page}
+        />
+      )}
     </section>
   );
 };
