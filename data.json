@@ -1,64 +1,460 @@
 {
-    "categories": [
-      {
-        "id": 1,
-        "name": "SmartPhones",
-        "image": "mobile-phone.png"
-      },
-      {
-        "id": 2,
-        "name": "Laptops",
-        "image": "laptop.png"
-      },
-      {
-        "id": 3,
-        "name": "Smartwatches",
-        "image": "watch.png"
-      },
-      {
-        "id": 4,
-        "name": "Headphones",
-        "image": "headphone.png"
-      },
-      {
-        "id": 5,
-        "name": "Gaming Consoles",
-        "image": "video-game.png"
-      }
-    ],
-    "products": [
-      {
-        "id": "1",
-        "categoryId": 1,
-        "title": "iPhone 14 Pro",
-        "description": "The iPhone 14 Pro is the latest flagship smartphone from Apple, featuring a stunning 6.1-inch OLED display, A16 Bionic chip, 128GB storage, and a triple-lens camera system. This phone also includes advanced features such as Face ID, wireless charging, and water resistance.",
-        "price": 1299,
-        "stock": 8,
-        "rating": 5,
-        "reviewCount": 50,
-        "images": [
-          "iphone14pro-1.jpg",
-          "iphone14pro-2.jpg",
-          "iphone14pro-3.jpg",
-          "iphone14pro-4.jpg"
+  "categories":[
+     {
+        "id":1,
+        "name":"SmartPhones",
+        "image":"/upload/category/mobile-phone.png"
+     },
+     {
+        "id":2,
+        "name":"Laptops",
+        "image":"/upload/category/laptop.png"
+     },
+     {
+        "id":3,
+        "name":"Smartwatches",
+        "image":"/upload/category/watch.png"
+     },
+     {
+        "id":4,
+        "name":"Headphones",
+        "image":"/upload/category/headphone.png"
+     },
+     {
+        "id":5,
+        "name":"Gaming Consoles",
+        "image":"/upload/category/video-game.png"
+     }
+  ],
+  "products":[
+     {
+        "id":"1",
+        "category": "SmartPhones",
+        "title":"iPhone 14 Pro",
+        "description":"The iPhone 14 Pro is the latest flagship smartphone from Apple, featuring a stunning 6.1-inch OLED display, A16 Bionic chip, 128GB storage, and a triple-lens camera system. This phone also includes advanced features such as Face ID, wireless charging, and water resistance.",
+        "price":1299,
+        "stock":8,
+        "reviews":{
+           "rate":5,
+           "counts":50
+        },
+        "images":[
+           "/upload/products/iphone14pro-1.jpg",
+           "/upload/products/iphone14pro-2.jpg",
+           "/upload/products/iphone14pro-3.jpg",
+           "/upload/products/iphone14pro-4.jpg"
         ]
-      },
-      {
-        "id": "2",
-        "categoryId": 1,
-        "title": "Samsung Galaxy A54",
-        "description": "The Samsung Galaxy A54 is a mid-range smartphone with a 6.5-inch FHD+ Super AMOLED display, 4GB of RAM, 128GB of storage, and a quad-lens camera system. It also features a 5000mAh battery with fast charging capabilities and runs on Android 11 with One UI 3.1.",
-        "price": 399,
-        "stock": 50,
-        "rating": 4.2,
-        "reviewCount": 150,
-        "images": [
-          "samsung-a54-1.jpg",
-          "samsung-a54-2.jpg",
-          "samsung-a54-3.jpg",
-          "samsung-a54-4.jpg"
+     },
+     {
+        "id":"2",
+        "category": "SmartPhones",
+        "title":"Samsung Galaxy A54",
+        "description":"The Samsung Galaxy A54 is a mid-range smartphone with a 6.5-inch FHD+ Super AMOLED display, 4GB of RAM, 128GB of storage, and a quad-lens camera system. It also features a 5000mAh battery with fast charging capabilities and runs on Android 11 with One UI 3.1.",
+        "price":399,
+        "stock":50,
+        "reviews":{
+           "rate":4.2,
+           "counts":150
+        },
+        "images":[
+           "/upload/products/samsung-a54-1.jpg",
+           "/upload/products/samsung-a54-2.jpg",
+           "/upload/products/samsung-a54-3.jpg",
+           "/upload/products/samsung-a54-4.jpg"
         ]
-      }
-    ]
-  }
-  
+     },
+     {
+        "id":"3",
+        "category": "SmartPhones",
+        "title":"Google Pixel 7 Pro",
+        "description":"The Google Pixel 7 Pro is a premium smartphone with a 6.5-inch QHD+ OLED display, 8GB of RAM, 256GB of storage, and a dual-lens camera system. It also features a 4500mAh battery with fast charging capabilities and runs on Android 12 with the latest version of Google Assistant.",
+        "price":999,
+        "stock":20,
+        "reviews":{
+           "rate":4.8,
+           "counts":75
+        },
+        "images":[
+           "/upload/products/pixel-7-pro-1.jpg",
+           "/upload/products/pixel-7-pro-2.jpg",
+           "/upload/products/pixel-7-pro-3.jpg",
+           "/upload/products/pixel-7-pro-4.jpg"
+        ]
+     },
+     {
+        "id":"4",
+        "category": "SmartPhones",
+        "title":"OnePlus 11R 5G",
+        "description":"The OnePlus 11R 5G is a flagship smartphone with a 6.7-inch QHD+ Fluid AMOLED display, 12GB of RAM, 512GB of storage, and a triple-lens camera system. It also features a 5000mAh battery with Warp Charge 65T and runs on OxygenOS 12 based on Android 12.",
+        "price":1299,
+        "stock":30,
+        "reviews":{
+           "rate":4.9,
+           "counts":100
+        },
+        "images":[
+           "/upload/products/oneplus-11r-1.jpg",
+           "/upload/products/oneplus-11r-2.jpg",
+           "/upload/products/oneplus-11r-3.jpg",
+           "/upload/products/oneplus-11r-4.jpg"
+        ]
+     },
+     {
+        "id":"5",
+        "title":"iPhone 13",
+        "category": "SmartPhones",
+        "description":"The iPhone 13 is the latest flagship smartphone from Apple, featuring a stunning 6.1-inch OLED display, A15 Bionic chip, 128GB storage, and a dual-lens camera system. This phone also includes advanced features such as Face ID, wireless charging, and water resistance.",
+        "price":1099,
+        "stock":75,
+        "reviews":{
+           "rate":4.7,
+           "counts":200
+        },
+        "images":[
+           "/upload/products/iphone13-1.jpg",
+           "/upload/products/iphone13-2.jpg",
+           "/upload/products/iphone13-3.jpg",
+           "/upload/products/iphone13-4.jpg"
+        ]
+     },
+     {
+        "id":"6",
+        "title":"MacBook Pro M1",
+        "category": "Laptops",
+        "description":"The MacBook Pro M1 is Apple's flagship laptop featuring the M1 chip, 16GB of RAM, 512GB of storage, and a stunning 13-inch Retina display. It also includes a Touch Bar, Touch ID, and runs on macOS Big Sur.",
+        "price":1699,
+        "stock":40,
+        "reviews":{
+           "rate":4.9,
+           "counts":200
+        },
+        "images":[
+           "/upload/products/macbook-pro-m1-1.jpg",
+           "/upload/products/macbook-pro-m1-2.jpg",
+           "/upload/products/macbook-pro-m1-3.jpg",
+           "/upload/products/macbook-pro-m1-4.jpg"
+        ]
+     },
+     {
+        "id":"7",
+        "title":"Dell XPS 13",
+        "category": "Laptops",
+        "description":"The Dell XPS 13 is a premium laptop with a 13.4-inch FHD+ InfinityEdge display, 16GB of RAM, 512GB of storage, and a 11th Gen Intel Core i7 processor. It also features a backlit keyboard, fingerprint reader, and runs on Windows 10.",
+        "price":1399,
+        "stock":30,
+        "reviews":{
+           "rate":4.5,
+           "counts":100
+        },
+        "images":[
+           "/upload/products/dell-xps-13-1.jpg",
+           "/upload/products/dell-xps-13-2.jpg"
+        ]
+     },
+     {
+        "id":"8",
+        "title":"HP Spectre x360",
+        "category": "Laptops",
+        "description":"The HP Spectre x360 is a 2-in-1 laptop with a 14-inch 4K OLED display, 16GB of RAM, 1TB of storage, and a 11th Gen Intel Core i7 processor. It also features a backlit keyboard, fingerprint reader, and runs on Windows 10.",
+        "price":1899,
+        "stock":25,
+        "reviews":{
+           "rate":4.7,
+           "counts":150
+        },
+        "images":[
+           "/upload/products/hp-spectre-x360-1.jpg",
+           "/upload/products/hp-spectre-x360-2.jpg",
+           "/upload/products/hp-spectre-x360-3.jpg",
+           "/upload/products/hp-spectre-x360-4.jpg"
+        ]
+     },
+     {
+        "id":"9",
+        "title":"Lenovo ThinkPad X1 Carbon",
+        "category": "Laptops",
+        "description":"The Lenovo ThinkPad X1 Carbon is a business laptop with a 14-inch FHD+ display, 16GB of RAM, 512GB of storage, and a 11th Gen Intel Core i7 processor. It also features a backlit keyboard, fingerprint reader, and runs on Windows 10 Pro.",
+        "price":1499,
+        "stock":20,
+        "reviews":{
+           "rate":4.6,
+           "counts":100
+        },
+        "images":[
+           "/upload/products/thinkpad-x1-carbon-1.jpg",
+           "/upload/products/thinkpad-x1-carbon-2.jpg",
+           "/upload/products/thinkpad-x1-carbon-3.jpg",
+           "/upload/products/thinkpad-x1-carbon-4.jpg"
+        ]
+     },
+     {
+        "id":"10",
+        "title":"Apple 2022 MacBook Air",
+        "category": "Laptops",
+        "description":"The 2022 MacBook Air is Apple's ultralight laptop featuring the M2 chip, 16GB of RAM, 1TB of storage, and a 13.3-inch Retina display. It also includes a Touch ID sensor and runs on macOS Monterey.",
+        "price":1799,
+        "stock":50,
+        "reviews":{
+           "rate":4.8,
+           "counts":150
+        },
+        "images":[
+           "/upload/products/macbook-air-2022-1.jpg",
+           "/upload/products/macbook-air-2022-2.jpg",
+           "/upload/products/macbook-air-2022-3.jpg",
+           "/upload/products/macbook-air-2022-4.jpg"
+        ]
+     },
+     {
+        "id":"11",
+        "title":"HP Pavilion Gaming 15",
+        "category": "Laptops",
+        "description":"The HP Pavilion Gaming 15 is a powerful gaming laptop with a 15.6-inch FHD display, 16GB of RAM, 512GB of storage, and a 11th Gen Intel Core i7 processor. It also features a backlit keyboard, NVIDIA GeForce RTX 3050 graphics, and runs on Windows 10 Home.",
+        "price":1199,
+        "stock":30,
+        "reviews":{
+           "rate":4.5,
+           "counts":100
+        },
+        "images":[
+           "/upload/products/hp-pavilion-gaming-15-1.jpg",
+           "/upload/products/hp-pavilion-gaming-15-2.jpg",
+           "/upload/products/hp-pavilion-gaming-15-3.jpg",
+           "/upload/products/hp-pavilion-gaming-15-4.jpg"
+        ]
+     },
+     {
+        "id":"12",
+        "title":"ASUS ZenBook",
+        "category": "Laptops",
+        "description":"The ASUS ZenBook is a premium laptop with a 13.3-inch FHD+ display, 16GB of RAM, 512GB of storage, and a 11th Gen Intel Core i7 processor. It also features a backlit keyboard, fingerprint reader, and runs on Windows 10 Home.",
+        "price":1299,
+        "stock":35,
+        "reviews":{
+           "rate":4.7,
+           "counts":200
+        },
+        "images":[
+           "/upload/products/asus-zenbook-1.jpg",
+           "/upload/products/asus-zenbook-2.jpg",
+           "/upload/products/asus-zenbook-3.jpg",
+           "/upload/products/asus-zenbook-4.jpg"
+        ]
+     },
+     {
+        "id":"13",
+        "title":"Apple Watch Series 7",
+        "category": "Smartwatches",
+        "description":"The Apple Watch Series 7 is the latest smartwatch from Apple with a redesigned Always-On Retina display that's 20% larger than its predecessor. It features fitness tracking, heart rate monitoring, sleep tracking, and an ECG app. It's available in both GPS and cellular versions, and comes in a variety of colors and band styles.",
+        "price":399,
+        "stock":50,
+        "reviews":{
+           "rate":4.9,
+           "counts":100
+        },
+        "images":[
+           "/upload/products/apple-watch-series-7-1.jpg",
+           "/upload/products/apple-watch-series-7-2.jpg",
+           "/upload/products/apple-watch-series-7-3.jpg",
+           "/upload/products/apple-watch-series-7-4.jpg"
+        ]
+     },
+     {
+        "id":"14",
+        "category": "Smartwatches",
+        "title":"Samsung Galaxy Watch 4",
+        "description":"The Samsung Galaxy Watch 4 is a feature-packed smartwatch with a 1.4-inch AMOLED display, fitness tracking, sleep tracking, heart rate monitoring, and an ECG app. It runs on Samsung's own Wear OS and is available in both Bluetooth and LTE versions. It also has a variety of band styles and colors to choose from.",
+        "price":299,
+        "stock":30,
+        "reviews":{
+           "rate":4.6,
+           "counts":75
+        },
+        "images":[
+           "/upload/products/samsung-galaxy-watch-4-1.jpg",
+           "/upload/products/samsung-galaxy-watch-4-2.jpg",
+           "/upload/products/samsung-galaxy-watch-4-3.jpg",
+           "/upload/products/samsung-galaxy-watch-4-4.jpg"
+        ]
+     },
+     {
+        "id":"15",
+        "category": "Smartwatches",
+        "title":"Garmin Forerunner 945",
+        "description":"The Garmin Forerunner 945 is a high-end GPS running watch with built-in maps, music storage, and advanced training features. It also has fitness tracking, sleep tracking, and heart rate monitoring. It's water-resistant up to 50 meters and has a battery life of up to 2 weeks in smartwatch mode.",
+        "price":599,
+        "stock":20,
+        "reviews":{
+           "rate":4.7,
+           "counts":50
+        },
+        "images":[
+           "/upload/products/garmin-forerunner-945-1.jpg",
+           "/upload/products/garmin-forerunner-945-2.jpg",
+           "/upload/products/garmin-forerunner-945-3.jpg",
+           "/upload/products/garmin-forerunner-945-4.jpg"
+        ]
+     },
+     {
+        "id":"16",
+        "title":"Fitbit Sense",
+        "category": "Smartwatches",
+        "description":"The Fitbit Sense is a health-focused smartwatch with fitness tracking, sleep tracking, heart rate monitoring, and an EDA sensor that measures stress levels. It also has built-in GPS, voice assistant support, and a battery life of up to 6 days. It comes in a variety of band styles and colors to choose from.",
+        "price":299,
+        "stock":25,
+        "reviews":{
+           "rate":4.4,
+           "counts":60
+        },
+        "images":[
+           "/upload/products/fitbit-sense-1.jpg",
+           "/upload/products/fitbit-sense-2.jpg",
+           "/upload/products/fitbit-sense-3.jpg",
+           "/upload/products/fitbit-sense-4.jpg"
+        ]
+     },
+     {
+        "id":"17",
+        "title":"Sony WH-1000XM4",
+        "category": "Headphones",
+        "description":"The Sony WH-1000XM4 is a premium wireless noise-cancelling headphone that offers exceptional sound quality and comfort. It features advanced noise cancellation technology, 30 hours of battery life, touch controls, and support for high-quality audio codecs like LDAC and aptX HD.",
+        "price":349,
+        "stock":40,
+        "reviews":{
+           "rate":4.8,
+           "counts":90
+        },
+        "images":[
+           "/upload/products/sony-wh-1000xm4-1.jpg",
+           "/upload/products/sony-wh-1000xm4-2.jpg",
+           "/upload/products/sony-wh-1000xm4-3.jpg",
+           "/upload/products/sony-wh-1000xm4-4.jpg"
+        ]
+     },
+     {
+        "id":"18",
+        "title":"Bose QuietComfort 35 II",
+        "category": "Headphones",
+        "description":"The Bose QuietComfort 35 II is a wireless noise-cancelling headphone that's designed for comfort and durability. It features advanced noise cancellation technology, up to 20 hours of battery life, and support for high-quality audio codecs like aptX and AAC.",
+        "price":299,
+        "stock":35,
+        "reviews":{
+           "rate":4.7,
+           "counts":80
+        },
+        "images":[
+           "/upload/products/bose-quietcomfort-35-ii-1.jpg",
+           "/upload/products/bose-quietcomfort-35-ii-2.jpg",
+           "/upload/products/bose-quietcomfort-35-ii-3.jpg",
+           "/upload/products/bose-quietcomfort-35-ii-4.jpg"
+        ]
+     },
+     {
+        "id":"19",
+        "title":"AirPods Pro",
+        "category": "Headphones",
+        "description":"The AirPods Pro is a premium true wireless earbud that offers exceptional sound quality and active noise cancellation. It features an H1 chip for quick and easy pairing with Apple devices, up to 4.5 hours of battery life, and a wireless charging case that provides additional battery life.",
+        "price":249,
+        "stock":50,
+        "reviews":{
+           "rate":4.6,
+           "counts":100
+        },
+        "images":[
+           "/upload/products/airpods-pro-1.jpg",
+           "/upload/products/airpods-pro-2.jpg",
+           "/upload/products/airpods-pro-3.jpg",
+           "/upload/products/airpods-pro-4.jpg"
+        ]
+     },
+     {
+        "id":"20",
+        "title":"Jabra Elite 85t",
+        "category": "Headphones",
+        "description":"The Jabra Elite 85t is a premium true wireless earbud that offers exceptional sound quality and active noise cancellation. It features a compact and comfortable design, up to 5.5 hours of battery life, and a wireless charging case that provides additional battery life. It also has customizable touch controls and support for high-quality audio codecs like AAC and SBC.",
+        "price":229,
+        "stock":45,
+        "reviews":{
+           "rate":4.5,
+           "counts":70
+        },
+        "images":[
+           "/upload/products/jabra-elite-85t-1.jpg",
+           "/upload/products/jabra-elite-85t-2.jpg",
+           "/upload/products/jabra-elite-85t-3.jpg",
+           "/upload/products/jabra-elite-85t-4.jpg"
+        ]
+     },
+     {
+        "id":"21",
+        "title":"boAt Rockerz 550",
+        "category": "Headphones",
+        "description":"The boAt Rockerz 550 is a wireless Bluetooth headphone designed to deliver powerful sound and deep bass. It comes with a sleek and stylish design, soft ear cups, and adjustable headband for a comfortable fit.",
+        "price":35.99,
+        "stock":20,
+        "reviews":{
+           "rate":4.3,
+           "counts":230
+        },
+        "images":[
+           "/upload/products/boat-rockerz-1.jpg",
+           "/upload/products/boat-rockerz-2.jpg",
+           "/upload/products/boat-rockerz-3.jpg",
+           "/upload/products/boat-rockerz-4.jpg"
+        ]
+     },
+     {
+        "id":"22",
+        "title":"PlayStation 5",
+        "category": "Gaming Consoles",
+        "description":"The PlayStation 5 is the latest gaming console from Sony. It features a powerful CPU and GPU, lightning-fast SSD storage, and support for 4K gaming at 60fps.",
+        "price":499.99,
+        "stock":10,
+        "reviews":{
+           "rate":4.8,
+           "counts":127
+        },
+        "images":[
+           "/upload/products/ps5-1.jpg",
+           "/upload/products/ps5-2.jpg",
+           "/upload/products/ps5-3.jpg"
+        ]
+     },
+     {
+        "id":"23",
+        "title":"Xbox Series X",
+        "category": "Gaming Consoles",
+        "description":"The Xbox Series X is the latest gaming console from Microsoft. It features a powerful CPU and GPU, ultra-fast SSD storage, and support for 4K gaming at 60fps.",
+        "price":499.99,
+        "stock":8,
+        "reviews":{
+           "rate":4.7,
+           "counts":103
+        },
+        "images":[
+           "/upload/products/xbox-series-x-1.jpg",
+           "/upload/products/xbox-series-x-2.jpg",
+           "/upload/products/xbox-series-x-3.jpg",
+           "/upload/products/xbox-series-x-4.jpg"
+        ]
+     },
+     {
+        "id":"24",
+        "title":"Nintendo Switch",
+        "category": "Gaming Consoles",
+        "description":"The Nintendo Switch is a hybrid gaming console that can be used as a portable device or as a home console. It features a 6.2-inch touch screen and detachable Joy-Con controllers.",
+        "price":299.99,
+        "stock":15,
+        "reviews":{
+           "rate":4.9,
+           "counts":218
+        },
+        "images":[
+           "/upload/products/nintendo-switch-1.jpg",
+           "/upload/products/nintendo-switch-2.jpg",
+           "/upload/products/nintendo-switch-3.jpg",
+           "/upload/products/nintendo-switch-4.jpg"
+        ]
+     }
+  ]
+}
